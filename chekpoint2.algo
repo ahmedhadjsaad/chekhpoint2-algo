@@ -1,0 +1,38 @@
+ALGORITHM algorithm_name
+VAR
+    arr_1 : ARRAY_OF INTEGER [m]
+    arr_2 : ARRAY_OF INTEGER [n]
+    x : INTEGER := 0
+// probleme 1 
+BEGIN
+    FOR i FROM 0 TO m-1  DO
+        FOR j FROM 0 TO n-1   DO
+            IF (arr_1[i] <> arr_2[j]) THEN
+                x += arr_1[i]
+            END_IF
+        END_FOR
+    END_FOR
+    Write ("x")
+
+    WHILE (arr_1[i] <> arr_2[j]) DO
+        x += arr_1[i]
+    END_WHILE
+    Write("x")
+END
+// probleme 2
+BEGIN
+    FOR i FROM 0 TO m-1  DO
+        FOR j FROM 0 TO n-1   DO
+            IF (arr_1[i] == arr_2[j]) THEN
+                x += arr_1[i]
+            END_IF
+        END_FOR
+    END_FOR
+    Write ("x")
+
+    WHILE (arr_1[i] == arr_2[j]) DO
+        x += arr_1[i]*2
+    END_WHILE
+    Write("x")
+END
+
